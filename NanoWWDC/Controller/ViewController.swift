@@ -9,13 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let cellSpacing: CGFloat = 30
 
     @IBOutlet weak var tableView: UITableView!
     
     var sessions = [
-        Session(title: "WWDC 2019 Keynote", speaker: "Tim Cook", hour: "14:00 - 16:00", hall: "HALL 2", sessionNumber: 1, category: "feature", photo: "speaker-tim"),
-        Session(title: "Apple Design Awards", speaker: "John Geleynse", hour: "17:00 - 19:00", hall: "HALL 1", sessionNumber: 2, category: "design", photo: "speaker-john"),
-        Session(title: "What's new in Swift", speaker: "Slava Pestov", hour: "19:30-21:00", hall: "HALL 3", sessionNumber: 3, category: "developer", photo: "speaker-slava")
+        Session(title: "WWDC 2019 Keynote", speaker: "Tim Cook", hour: "14:00 - 16:00", hall: "HALL 2", sessionNumber: 1, category: "feature ❤", photo: "speaker-tim"),
+        Session(title: "Apple Design Awards", speaker: "John Geleynse", hour: "17:00 - 19:00", hall: "HALL 1", sessionNumber: 2, category: "design 🎨", photo: "speaker-john"),
+        Session(title: "What's new in Swift", speaker: "Slava Pestov", hour: "19:30-21:00", hall: "HALL 3", sessionNumber: 3, category: "developer 💻", photo: "speaker-slava")
     ]
     
     override func viewDidLoad() {
@@ -33,10 +34,27 @@ class ViewController: UIViewController {
         }
     }
 
-
+    @IBAction func favoriteSession(_ sender: UIButton) {
+        if sender.currentBackgroundImage == UIImage(named: "favorites2x"){
+            let image = UIImage(named: "favorites-select2x")
+            //sender.image = UIImage(named: "favorites-selected2x")
+            print("a")
+            sender.setBackgroundImage(image, for: .normal)
+        }
+        else {
+            let image = UIImage(named: "favorites2x")
+            
+            sender.setBackgroundImage(image, for: .normal)
+            print("b")
+        }
+        
+        
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {
+    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,9 +70,20 @@ extension ViewController: UITableViewDataSource {
         let session = sessions[indexPath.row]
         
         cell.sessionImageView.image = UIImage(named: session.photo)
+        
         cell.sessionTitle.text = session.title
+        cell.sessionSpeaker.text = "Speaker: \(session.speaker)"
+        cell.sessionHour.text = session.hour
+        cell.sessionHall.text = session.hall
+        cell.sessionNumber.text = "Session 0\(session.sessionNumber)"
+        cell.sessionCategory.text = session.category
+        
         return cell
+        
+    }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return cellSpacing
     }
     
     

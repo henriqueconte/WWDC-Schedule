@@ -13,6 +13,12 @@ class SessionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var sessionImageView: UIImageView!
     @IBOutlet weak var sessionTitle: UILabel!
+    @IBOutlet weak var sessionSpeaker: UILabel!
+    @IBOutlet weak var sessionHour: UILabel!
+    @IBOutlet weak var sessionHall: UILabel!
+    @IBOutlet weak var sessionNumber: UILabel!
+    @IBOutlet weak var sessionCategory: UILabel!
+    
     
     
     override func awakeFromNib() {
