@@ -272,8 +272,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="250.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HdI-3O-f65">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="speaker-tim2" translatesAutoresizingMaskIntoConstraints="NO" id="HdI-3O-f65">
+                                                    <rect key="frame" x="-5" y="0.0" width="385" height="251"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="251" id="raX-Fd-tgz"/>
                                                         <constraint firstAttribute="width" constant="375" id="w7J-zY-mkU"/>
@@ -322,11 +322,10 @@ CALENDAR</string>
                                             <constraints>
                                                 <constraint firstItem="HdI-3O-f65" firstAttribute="top" secondItem="8lS-0a-ms7" secondAttribute="top" id="H3R-kg-DuQ"/>
                                                 <constraint firstItem="d8W-EP-FbY" firstAttribute="top" secondItem="HdI-3O-f65" secondAttribute="bottom" constant="-54" id="Jbe-zx-P5e"/>
-                                                <constraint firstItem="HdI-3O-f65" firstAttribute="leading" secondItem="8lS-0a-ms7" secondAttribute="leading" id="Ncn-Bo-IyJ"/>
+                                                <constraint firstItem="HdI-3O-f65" firstAttribute="leading" secondItem="8lS-0a-ms7" secondAttribute="leading" constant="-5" id="Ncn-Bo-IyJ"/>
                                                 <constraint firstItem="AuD-gG-anl" firstAttribute="leading" secondItem="8lS-0a-ms7" secondAttribute="leadingMargin" id="Wfv-eG-k6k"/>
                                                 <constraint firstAttribute="trailing" secondItem="d8W-EP-FbY" secondAttribute="trailing" constant="16" id="dwJ-fo-LBR"/>
                                                 <constraint firstItem="UTW-Hz-DmQ" firstAttribute="leading" secondItem="8lS-0a-ms7" secondAttribute="leadingMargin" id="mxu-3X-PWU"/>
-                                                <constraint firstAttribute="trailing" secondItem="HdI-3O-f65" secondAttribute="trailing" id="rXx-Pp-oeK"/>
                                                 <constraint firstItem="UTW-Hz-DmQ" firstAttribute="top" secondItem="HdI-3O-f65" secondAttribute="bottom" constant="-54" id="wRq-6Q-wQK"/>
                                                 <constraint firstItem="AuD-gG-anl" firstAttribute="top" secondItem="8lS-0a-ms7" secondAttribute="topMargin" constant="11" id="xyb-S4-sod"/>
                                             </constraints>
@@ -480,15 +479,15 @@ CALENDAR</string>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="135" id="brS-Cu-rLU">
-                                        <rect key="frame" x="0.0" y="469" width="375" height="135"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="134" id="brS-Cu-rLU">
+                                        <rect key="frame" x="0.0" y="469" width="375" height="134"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="brS-Cu-rLU" id="6W5-Kf-rJM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="134.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arG-xm-3IE">
-                                                    <rect key="frame" x="16" y="5.5" width="343" height="123.5"/>
+                                                    <rect key="frame" x="16" y="5.5" width="343" height="122.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -504,7 +503,7 @@ CALENDAR</string>
                                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="329" id="hsn-ik-X4f">
-                                        <rect key="frame" x="0.0" y="604" width="375" height="329"/>
+                                        <rect key="frame" x="0.0" y="603" width="375" height="329"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hsn-ik-X4f" id="KWT-nK-pUd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="328.5"/>
@@ -535,7 +534,7 @@ CALENDAR</string>
                                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="329" id="Ws1-jA-Ppb">
-                                        <rect key="frame" x="0.0" y="933" width="375" height="329"/>
+                                        <rect key="frame" x="0.0" y="932" width="375" height="329"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ws1-jA-Ppb" id="me7-uP-WUP">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="328.5"/>
@@ -607,6 +606,7 @@ CALENDAR</string>
         <image name="location2x" width="24" height="24"/>
         <image name="map-hall2" width="686" height="546"/>
         <image name="more" width="26" height="26"/>
+        <image name="speaker-tim2" width="766" height="518"/>
         <image name="time2x" width="13" height="13"/>
     </resources>
 </document>
