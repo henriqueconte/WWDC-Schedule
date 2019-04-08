@@ -14,9 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var sessions = [
-        Session(title: "WWDC 2019 Keynote", speaker: "Tim Cook", hour: "14:00 - 16:00", hall: "HALL 2", sessionNumber: 1, category: "feature ❤", photo: "speaker-tim"),
-        Session(title: "Apple Design Awards", speaker: "John Geleynse", hour: "17:00 - 19:00", hall: "HALL 1", sessionNumber: 2, category: "design 🎨", photo: "speaker-john"),
-        Session(title: "What's new in Swift", speaker: "Slava Pestov", hour: "19:30-21:00", hall: "HALL 3", sessionNumber: 3, category: "developer 💻", photo: "speaker-slava")
+        Session(title: "WWDC 2019 Keynote", speaker: "Tim Cook", date: "Monday, Jun 3", hour: "14:00 - 16:00", hall: "HALL 2", sessionNumber: 1, category: "feature ❤", photo: "speaker-tim", sessionDetails: "Every year, a great migration is made by one of the world's most mysterious species. To reach this utopian destination, these unique mammals will instinctively embark on a nomadic journey from all corners of the world.", speakerDetails: "Apple CEO  Auburn 🏀 🏈 Duke 🏀 National Parks 🏞️ “Life's most persistent and urgent question is, 'What are you doing for others?'” - MLK"),
+        
+        Session(title: "Apple Design Awards", speaker: "John Geleynse", date: "Monday, Jun 3", hour: "17:00 - 19:00", hall: "HALL 1", sessionNumber: 2, category: "design 🎨", photo: "speaker-john", sessionDetails: "Join us for an unforgettable award ceremony celebrating developers and their outstanding work. The 2018 Apple Design Awards recognize state of the art iOS, macOS, watchOS, and tvOS apps that reflect excellence in design and innovation.", speakerDetails: "Director of Technology Evangelism & User Experience Evangelist. Specialties: User interface design, visual design, interaction design, human interface design consulting."),
+        Session(title: "What's new in Swift", speaker: "Slava Pestov", date: "Monday, Jun 3", hour: "19:30-21:00", hall: "HALL 3", sessionNumber: 3, category: "developer 💻", photo: "speaker-slava", sessionDetails: "Hear about the latest advancements in Swift, the safe, fast, and expressive language. Find out about improvements to build times, code size, and runtime performance. Learn how to take advantage of new features in your code that eliminate boilerplate, increase safety and security, and improve your overall development productivity.", speakerDetails: "Working at Apple on the Swift programming language. Key focus areas: Fixing compiler crashers, implementing missing features and edge cases.")
     ]
     
     override func viewDidLoad() {

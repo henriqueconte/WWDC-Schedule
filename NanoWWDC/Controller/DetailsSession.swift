@@ -21,6 +21,7 @@ class DetailsSession: UITableViewController {
     
     @IBOutlet weak var scheduleSession: UILabel!
     
+    @IBOutlet weak var typeSessionLabel: UILabel!
     @IBOutlet weak var hallLabel: UILabel!
     
     @IBOutlet weak var markAsWatchedButton: UIButton!
@@ -40,7 +41,16 @@ class DetailsSession: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        typeSessionLabel.text = session?.category
         sessionTitleLabel.text = session?.title
+        speakerNameLabel.text = session?.speaker
+        speakerDetailsLabel.text = session?.speakerDetails
+    
+        scheduleSession.text = session?.hour
+        hallLabel.text = session?.hall
+        
+        sessionDetailsLabel.text = session?.sessionDetails
+        
         addToCalendarButton.layer.cornerRadius = 15
         markAsWatchedButton.layer.cornerRadius = 15
     

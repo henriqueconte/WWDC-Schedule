@@ -258,7 +258,7 @@
         <scene sceneID="ts7-CX-RLF">
             <objects>
                 <tableViewController id="uNr-Gt-oaL" customClass="DetailsSession" customModule="NanoWWDC" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="stH-wb-T0v">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="stH-wb-T0v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -272,7 +272,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="250.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HdI-3O-f65">
+                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HdI-3O-f65">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="251" id="raX-Fd-tgz"/>
@@ -291,30 +291,14 @@
                                                     <rect key="frame" x="281" y="205" width="11" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuD-gG-anl">
-                                                    <rect key="frame" x="16" y="22" width="72.5" height="20"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="feature ">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="❤️">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <font key="NSFont" size="11" name="AppleColorEmoji"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <color key="NSStrokeColor" red="0.66666999999999998" green="0.66666999999999998" blue="0.66666999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuD-gG-anl">
+                                                    <rect key="frame" x="16" y="22" width="0.0" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WWDC 2019 Keynote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTW-Hz-DmQ">
-                                                    <rect key="frame" x="16" y="197" width="228.5" height="29"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTW-Hz-DmQ">
+                                                    <rect key="frame" x="16" y="197" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -365,9 +349,8 @@ CALENDAR</string>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8P7-hI-otb">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8P7-hI-otb">
                                                     <rect key="frame" x="16" y="38" width="343" height="61"/>
-                                                    <string key="text">Apple CEO  Auburn 🏀 🏈 Duke 🏀 National Parks 🏞️ “Life's most persistent and urgent question is, 'What are you doing for others?'” - MLK */</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -407,7 +390,7 @@ CALENDAR</string>
                                                     <color key="textColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time2x" translatesAutoresizingMaskIntoConstraints="NO" id="aOd-o3-uuV">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="aOd-o3-uuV">
                                                     <rect key="frame" x="16" y="21" width="12" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="OsI-yg-oW3"/>
@@ -455,14 +438,14 @@ CALENDAR</string>
                                                         <constraint firstAttribute="width" constant="12" id="Xmv-cx-L6Y"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HALL 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxf-MV-qUS">
-                                                    <rect key="frame" x="36" y="16" width="56.5" height="21.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxf-MV-qUS">
+                                                    <rect key="frame" x="36" y="16" width="0.0" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psY-gO-edW">
-                                                    <rect key="frame" x="192.5" y="12" width="170" height="30"/>
+                                                    <rect key="frame" x="189" y="12" width="170" height="30"/>
                                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="170" id="Qcw-Ng-GEI"/>
@@ -487,9 +470,9 @@ CALENDAR</string>
                                             <constraints>
                                                 <constraint firstItem="Zxf-MV-qUS" firstAttribute="centerY" secondItem="sSy-3k-9C1" secondAttribute="centerY" id="9U5-PT-yR4"/>
                                                 <constraint firstItem="JTK-Ck-eB5" firstAttribute="centerY" secondItem="sSy-3k-9C1" secondAttribute="centerY" id="VGx-Js-Gz2"/>
+                                                <constraint firstAttribute="trailing" secondItem="psY-gO-edW" secondAttribute="trailing" constant="16" id="WOc-2y-ERb"/>
                                                 <constraint firstItem="psY-gO-edW" firstAttribute="centerY" secondItem="sSy-3k-9C1" secondAttribute="centerY" id="cMu-lC-SOc"/>
                                                 <constraint firstAttribute="bottom" secondItem="Zxf-MV-qUS" secondAttribute="bottom" constant="16" id="hbH-ss-Q5b"/>
-                                                <constraint firstItem="psY-gO-edW" firstAttribute="leading" secondItem="Zxf-MV-qUS" secondAttribute="trailing" constant="100" id="jWj-rN-nv4"/>
                                                 <constraint firstItem="Zxf-MV-qUS" firstAttribute="leading" secondItem="JTK-Ck-eB5" secondAttribute="trailing" constant="8" id="k8I-0a-Xu8"/>
                                                 <constraint firstItem="JTK-Ck-eB5" firstAttribute="leading" secondItem="sSy-3k-9C1" secondAttribute="leading" constant="16" id="kwE-Q1-GOo"/>
                                                 <constraint firstItem="Zxf-MV-qUS" firstAttribute="top" secondItem="sSy-3k-9C1" secondAttribute="top" constant="16" id="l4v-eI-KNz"/>
@@ -497,16 +480,15 @@ CALENDAR</string>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="123" id="brS-Cu-rLU">
-                                        <rect key="frame" x="0.0" y="469" width="375" height="123"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="135" id="brS-Cu-rLU">
+                                        <rect key="frame" x="0.0" y="469" width="375" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="brS-Cu-rLU" id="6W5-Kf-rJM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="122.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="brS-Cu-rLU" id="6W5-Kf-rJM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="134.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arG-xm-3IE">
-                                                    <rect key="frame" x="16" y="5.5" width="343" height="111.5"/>
-                                                    <string key="text">Every year, a great migration is made by one of the world's most mysterious species. To reach this utopian destination, these unique mammals will instinctively embark on a nomadic journey from all corners of the world.</string>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arG-xm-3IE">
+                                                    <rect key="frame" x="16" y="5.5" width="343" height="123.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -522,7 +504,7 @@ CALENDAR</string>
                                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="329" id="hsn-ik-X4f">
-                                        <rect key="frame" x="0.0" y="592" width="375" height="329"/>
+                                        <rect key="frame" x="0.0" y="604" width="375" height="329"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hsn-ik-X4f" id="KWT-nK-pUd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="328.5"/>
@@ -553,7 +535,7 @@ CALENDAR</string>
                                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="329" id="Ws1-jA-Ppb">
-                                        <rect key="frame" x="0.0" y="921" width="375" height="329"/>
+                                        <rect key="frame" x="0.0" y="933" width="375" height="329"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ws1-jA-Ppb" id="me7-uP-WUP">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="328.5"/>
@@ -610,6 +592,7 @@ CALENDAR</string>
                         <outlet property="speakerDetailsLabel" destination="8P7-hI-otb" id="1Zv-Rc-Yz5"/>
                         <outlet property="speakerImageView" destination="HdI-3O-f65" id="f1O-tS-s1N"/>
                         <outlet property="speakerNameLabel" destination="YR3-5U-sTf" id="1Dl-ip-h88"/>
+                        <outlet property="typeSessionLabel" destination="AuD-gG-anl" id="xyQ-A4-R3Y"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4C-JZ-sQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -618,6 +601,7 @@ CALENDAR</string>
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" width="35" height="35"/>
         <image name="favorites2x" width="32" height="30"/>
         <image name="focus" width="42" height="42"/>
         <image name="location2x" width="24" height="24"/>
