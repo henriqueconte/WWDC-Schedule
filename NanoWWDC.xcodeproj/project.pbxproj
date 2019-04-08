@@ -64,11 +64,11 @@
 			children = (
 				CF3DAAED2257CB1A00648D8A /* View */,
 				CF3DAAEB2257CAFF00648D8A /* Model */,
-				8014ED362257BCDF00A66FAA /* AppDelegate.swift */,
 				CF3DAAEC2257CB0C00648D8A /* Controller */,
 				8014ED3A2257BCDF00A66FAA /* Main.storyboard */,
 				8014ED3D2257BCE000A66FAA /* Assets.xcassets */,
 				8014ED3F2257BCE000A66FAA /* LaunchScreen.storyboard */,
+				8014ED362257BCDF00A66FAA /* AppDelegate.swift */,
 				8014ED422257BCE000A66FAA /* Info.plist */,
 			);
 			path = NanoWWDC;

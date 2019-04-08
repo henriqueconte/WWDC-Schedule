@@ -30,10 +30,26 @@ class DetailsSession: UITableViewController {
     
     @IBOutlet weak var localImageView: UIImageView!
     
+    var session: Session?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        sessionTitleLabel.text = session?.title
+        addToCalendarButton.layer.cornerRadius = 15
+        markAsWatchedButton.layer.cornerRadius = 15
+    
+        speakerImageView.image = UIImage(named: session!.photo + "2")
+    }
+    
+
+    
+    
+
     
 }
