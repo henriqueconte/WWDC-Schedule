@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var isFavorite: Bool = false
+    
     var dates = ["Monday, Jun 3", "Tuesday, Jun 4", "Wednesday, Jun 5"]
     var sessions = [
         Session(title: "WWDC 2019 Keynote", speaker: "Tim Cook", date: "Monday, Jun 3", hour: "14:00 - 16:00", hall: "HALL 2", sessionNumber: 1, category: "feature ❤", photo: "speaker-tim", sessionDetails: "Every year, a great migration is made by one of the world's most mysterious species. To reach this utopian destination, these unique mammals will instinctively embark on a nomadic journey from all corners of the world.", speakerDetails: "Apple CEO  Auburn 🏀 🏈 Duke 🏀 National Parks 🏞️ “Life's most persistent and urgent question is, 'What are you doing for others?'” - MLK"),
@@ -22,7 +24,7 @@ class ViewController: UIViewController {
         
         Session(title: "Qualities of a Great Design", speaker: "Lauren Strehlow", date: "Tuesday, Jun 4", hour: "10:00 - 12:00", hall: "HALL 2", sessionNumber: 4, category: "design 🎨", photo: "speaker-lauren", sessionDetails: "Great Design isn't magic, it is crafted with care by real people. Explore the characteristics of great design through the voices of designers from Apple and our developer community. Learn how they take inspiration from everyday life, conceive and refine ideas, and push themselves to design apps and games that can stand the test of time.", speakerDetails: "Lauren Strehlow Creative, strategic, diplomatic thinker who excels in a fast paced, visual environment. Enjoys managing, mentoring and providing creative guidance in high pressure situations. Let's do this."),
         
-        Session(title: "What's New in watchOS", speaker: "Lori Hylan-Cho", date: "Tuesday, Jun 4", hour:  "14:00 - 16:00", hall: "HALL 2", sessionNumber: 5, category: "feature ❤", photo: "speaker-lori", sessionDetails: "WatchOS 5 makes creating great experiences on Apple Watch easier than ever before. Learn about robust capabilities to create rich and interactive notifications, a new background mode and controls for audio playback, shortcuts that bring your apps to the Siri watch face, and more.", speakerDetails: "Lori Hylan-Cho SW Engineering Manager at Apple. Specialties: Assembling and leading highly functional teams, agile software development, iOS engineering & project management, API development & documentation, finding the flaw in any plan."),
+        Session(title: "What's New in whatchOS", speaker: "Lori Hylan-Cho", date: "Tuesday, Jun 4", hour:  "14:00 - 16:00", hall: "HALL 2", sessionNumber: 5, category: "feature ❤", photo: "speaker-lori", sessionDetails: "WatchOS 5 makes creating great experiences on Apple Watch easier than ever before. Learn about robust capabilities to create rich and interactive notifications, a new background mode and controls for audio playback, shortcuts that bring your apps to the Siri watch face, and more.", speakerDetails: "Lori Hylan-Cho SW Engineering Manager at Apple. Specialties: Assembling and leading highly functional teams, agile software development, iOS engineering & project management, API development & documentation, finding the flaw in any plan."),
         
         Session(title: "Building Faster in Xcode", speaker: "David Owens", date: "Tuesday, Jun 4", hour: "16:00- 18:00", hall: "HALL 3", sessionNumber: 6, category: "developer 💻", photo: "speaker-david", sessionDetails: "none", speakerDetails: "none"),
         
@@ -40,15 +42,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+    
         
-        // Do any additional setup after loading the view.
+        for i in 0..<sessions.count-1 {
+            sessions[i].setNextSession(nextSession: sessions[i+1])
+        }
         
+    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let session = sender as? Session {
             if let nextViewController = segue.destination as? DetailsSession {
                 nextViewController.session = session
+                nextViewController.isFavorite = isFavorite
             }
         }
     }
@@ -58,11 +65,13 @@ class ViewController: UIViewController {
             let image = UIImage(named: "favorites-select2x")
             //sender.image = UIImage(named: "favorites-selected2x")
             sender.setBackgroundImage(image, for: .normal)
+            isFavorite = true
         }
         else {
             let image = UIImage(named: "favorites2x")
             
             sender.setBackgroundImage(image, for: .normal)
+            isFavorite = false
         }
         
         
@@ -103,6 +112,8 @@ extension ViewController: UITableViewDataSource {
         
         return headerView
     }
+
+   
     
     
     
@@ -125,7 +136,6 @@ extension ViewController: UITableViewDataSource {
         cell.sessionTitle.text = session.title
         cell.sessionSpeaker.text = "Speaker: \(session.speaker)"
         cell.sessionHour.text = session.hour
-        cell.sessionHour.textColor = UIColor(red: 1.0, green: 0.17, blue: 0.33, alpha: 1.0)
         cell.sessionHall.text = session.hall
         cell.sessionHall.textColor = UIColor(red: 1.0, green: 0.17, blue: 0.33, alpha: 1.0)
     
@@ -134,7 +144,7 @@ extension ViewController: UITableViewDataSource {
 //        cell.cellShadow.layer.shadowOffset = CGSize(width: -1.0, height: 1.0)
 //        cell.cellShadow.layer.opacity = 1.0
 //        cell.cellShadow.layer.masksToBounds = false
-        cell.cellShadow.layer.cornerRadius = 10.0
+        //cell.cellShadow.layer.cornerRadius = 10.0
     
         
 //        cell.contentView.layer.masksToBounds = false

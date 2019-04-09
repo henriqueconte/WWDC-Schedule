@@ -20,6 +20,7 @@ class Session {
     var photo: String
     var sessionDetails: String
     var speakerDetails: String
+    var nextSession: Session?
     
     
     init(title: String, speaker: String, date: String, hour: String, hall: String, sessionNumber: Int, category: String, photo: String, sessionDetails: String, speakerDetails: String) {
@@ -33,6 +34,10 @@ class Session {
         self.photo = photo
         self.sessionDetails = sessionDetails
         self.speakerDetails = speakerDetails
+    }
+    
+    func setNextSession (nextSession: Session?) {
+        self.nextSession = nextSession
     }
     
 }
