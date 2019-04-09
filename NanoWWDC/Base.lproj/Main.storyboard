@@ -243,7 +243,6 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
->>>>>>> 80ef1752595acd2fea5cb27510ddd2d17c616d84
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="L8W-pm-3U7" id="pJi-gj-ENT"/>
@@ -343,10 +342,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker-tim2" translatesAutoresizingMaskIntoConstraints="NO" id="HdI-3O-f65">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
+                                                    <rect key="frame" x="-8" y="0.0" width="391" height="251"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="251" id="raX-Fd-tgz"/>
-                                                        <constraint firstAttribute="width" constant="375" id="w7J-zY-mkU"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d8W-EP-FbY">
@@ -358,10 +356,9 @@
                                                     </constraints>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more" translatesAutoresizingMaskIntoConstraints="NO" id="36B-VO-SzZ">
-                                                    <rect key="frame" x="281" y="205" width="11" height="14"/>
+                                                    <rect key="frame" x="269" y="205" width="26" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="KVl-wT-Y3u"/>
-                                                        <constraint firstAttribute="width" constant="11" id="YdF-HD-Ju2"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuD-gG-anl">
@@ -396,19 +393,19 @@ CALENDAR</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="36B-VO-SzZ" firstAttribute="top" secondItem="HdI-3O-f65" secondAttribute="bottom" constant="-46" id="37C-ql-Jxi"/>
-                                                <constraint firstItem="t9H-0x-rsl" firstAttribute="leading" secondItem="HdI-3O-f65" secondAttribute="trailing" constant="-80" id="52U-eO-d6v"/>
                                                 <constraint firstItem="t9H-0x-rsl" firstAttribute="top" secondItem="HdI-3O-f65" secondAttribute="bottom" constant="-53" id="9TF-WS-Tox"/>
+                                                <constraint firstAttribute="trailing" secondItem="d8W-EP-FbY" secondAttribute="trailing" constant="16" id="BX6-EH-nYa"/>
                                                 <constraint firstItem="HdI-3O-f65" firstAttribute="top" secondItem="8lS-0a-ms7" secondAttribute="top" id="H3R-kg-DuQ"/>
                                                 <constraint firstItem="d8W-EP-FbY" firstAttribute="top" secondItem="HdI-3O-f65" secondAttribute="bottom" constant="-54" id="Jbe-zx-P5e"/>
-                                                <constraint firstItem="HdI-3O-f65" firstAttribute="leading" secondItem="8lS-0a-ms7" secondAttribute="leading" id="Ncn-Bo-IyJ"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="t9H-0x-rsl" secondAttribute="bottom" constant="16" id="OW0-FN-Exc"/>
                                                 <constraint firstItem="AuD-gG-anl" firstAttribute="leading" secondItem="8lS-0a-ms7" secondAttribute="leadingMargin" id="Wfv-eG-k6k"/>
-                                                <constraint firstAttribute="trailing" secondItem="d8W-EP-FbY" secondAttribute="trailing" constant="16" id="dwJ-fo-LBR"/>
-                                                <constraint firstItem="t9H-0x-rsl" firstAttribute="leading" secondItem="36B-VO-SzZ" secondAttribute="trailing" constant="3" id="g1f-1f-qyj"/>
+                                                <constraint firstAttribute="trailing" secondItem="t9H-0x-rsl" secondAttribute="trailing" constant="26" id="ZXZ-lS-2NH"/>
+                                                <constraint firstItem="t9H-0x-rsl" firstAttribute="leading" secondItem="36B-VO-SzZ" secondAttribute="trailing" id="g1f-1f-qyj"/>
                                                 <constraint firstItem="UTW-Hz-DmQ" firstAttribute="leading" secondItem="8lS-0a-ms7" secondAttribute="leadingMargin" id="mxu-3X-PWU"/>
+                                                <constraint firstItem="HdI-3O-f65" firstAttribute="leading" secondItem="8lS-0a-ms7" secondAttribute="leading" constant="-8" id="tqg-cg-dGZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="HdI-3O-f65" secondAttribute="trailing" constant="-8" id="vQg-oJ-yNh"/>
                                                 <constraint firstItem="UTW-Hz-DmQ" firstAttribute="top" secondItem="HdI-3O-f65" secondAttribute="bottom" constant="-54" id="wRq-6Q-wQK"/>
                                                 <constraint firstItem="AuD-gG-anl" firstAttribute="top" secondItem="8lS-0a-ms7" secondAttribute="topMargin" constant="11" id="xyb-S4-sod"/>
-                                                <constraint firstAttribute="trailing" secondItem="HdI-3O-f65" secondAttribute="trailing" id="zqq-nF-UlD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -664,7 +661,7 @@ CALENDAR</string>
                             <barButtonItem style="done" systemItem="action" id="G5v-e7-aPC">
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
-                            <barButtonItem image="favorites2x" style="done" id="WUc-Bz-TpS">
+                            <barButtonItem image="favorites1x" style="done" id="WUc-Bz-TpS">
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -772,6 +769,7 @@ CALENDAR</string>
     </scenes>
     <resources>
         <image name="calendar" width="35" height="35"/>
+        <image name="favorites1x" width="22" height="21"/>
         <image name="favorites2x" width="16" height="15"/>
         <image name="focus" width="42" height="42"/>
         <image name="location2x" width="24" height="24"/>

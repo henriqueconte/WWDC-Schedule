@@ -47,7 +47,7 @@ class DetailsSession: UITableViewController {
         super.viewWillAppear(animated)
         
         if isFavorite {
-            favoriteButton.image = UIImage(named: "favorites-select2x")
+            favoriteButton.image = UIImage(named: "favorites-select")
             favoriteButton.tintColor = UIColor(red: 1.0, green: 0.76, blue: 0, alpha: 1)
         } 
         
