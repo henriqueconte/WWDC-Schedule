@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var isFavorite: Bool = false
+    
     var dates = ["Monday, Jun 3", "Tuesday, Jun 4", "Wednesday, Jun 5"]
     var sessions = [
         Session(title: "WWDC 2019 Keynote", speaker: "Tim Cook", date: "Monday, Jun 3", hour: "14:00 - 16:00", hall: "HALL 2", sessionNumber: 1, category: "feature ❤", photo: "speaker-tim", sessionDetails: "Every year, a great migration is made by one of the world's most mysterious species. To reach this utopian destination, these unique mammals will instinctively embark on a nomadic journey from all corners of the world.", speakerDetails: "Apple CEO  Auburn 🏀 🏈 Duke 🏀 National Parks 🏞️ “Life's most persistent and urgent question is, 'What are you doing for others?'” - MLK"),
@@ -40,18 +42,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        // Do any additional setup after loading the view.
+    
         
+        for i in 0..<sessions.count-1 {
+            sessions[i].setNextSession(nextSession: sessions[i+1])
+        }
         
-        var firstViewController:UIViewController = UIViewController()
-        var customTabBarItem:UITabBarItem = UITabBarItem(title: nil, image: UIImage(named: "schedule")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), selectedImage: UIImage(named: "schedule"))
-        firstViewController.tabBarItem = customTabBarItem
+    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let session = sender as? Session {
             if let nextViewController = segue.destination as? DetailsSession {
                 nextViewController.session = session
+                nextViewController.isFavorite = isFavorite
             }
         }
     }
@@ -60,14 +64,14 @@ class ViewController: UIViewController {
         if sender.currentBackgroundImage == UIImage(named: "favorites2x"){
             let image = UIImage(named: "favorites-select2x")
             //sender.image = UIImage(named: "favorites-selected2x")
-            print("a")
             sender.setBackgroundImage(image, for: .normal)
+            isFavorite = true
         }
         else {
             let image = UIImage(named: "favorites2x")
             
             sender.setBackgroundImage(image, for: .normal)
-            print("b")
+            isFavorite = false
         }
         
         

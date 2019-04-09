@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Schedule-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NanoWWDC" customModuleProvider="target" sceneMemberID="viewController">
@@ -183,7 +183,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Gzp-ev-62P"/>
+                    <navigationItem key="navigationItem" title="Schedule" id="Gzp-ev-62P"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="L8W-pm-3U7" id="pJi-gj-ENT"/>
@@ -264,7 +264,7 @@
             </objects>
             <point key="canvasLocation" x="1820" y="129.98500749625188"/>
         </scene>
-        <!--SessionDetails-->
+        <!--Item-->
         <scene sceneID="ts7-CX-RLF">
             <objects>
                 <tableViewController id="uNr-Gt-oaL" customClass="DetailsSession" customModule="NanoWWDC" customModuleProvider="target" sceneMemberID="viewController">
@@ -599,17 +599,28 @@ CALENDAR</string>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="ts4-T2-3Xt"/>
-                    <navigationItem key="navigationItem" title="SessionDetails" id="ePF-NH-3a6"/>
+                    <navigationItem key="navigationItem" id="ePF-NH-3a6">
+                        <rightBarButtonItems>
+                            <barButtonItem style="done" systemItem="action" id="G5v-e7-aPC">
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem image="favorites2x" style="done" id="WUc-Bz-TpS">
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="1400"/>
                     <connections>
                         <outlet property="addToCalendarButton" destination="d8W-EP-FbY" id="RIB-js-W5f"/>
                         <outlet property="dateSessionLabel" destination="L9e-sJ-u0z" id="Zpv-zr-YQX"/>
+                        <outlet property="favoriteButton" destination="WUc-Bz-TpS" id="Ihb-Co-fWk"/>
                         <outlet property="hallLabel" destination="Zxf-MV-qUS" id="dDW-K6-CRY"/>
                         <outlet property="localImageView" destination="pkQ-vW-wWN" id="A1Y-z6-MCp"/>
                         <outlet property="markAsWatchedButton" destination="psY-gO-edW" id="7f2-YE-NmH"/>
                         <outlet property="scheduleSession" destination="gC6-Md-wsh" id="xuo-9q-zf8"/>
                         <outlet property="sessionDetailsLabel" destination="arG-xm-3IE" id="e6l-TJ-B0O"/>
                         <outlet property="sessionTitleLabel" destination="UTW-Hz-DmQ" id="Amp-kq-5QQ"/>
+                        <outlet property="shareButton" destination="G5v-e7-aPC" id="Hzm-Hk-faB"/>
                         <outlet property="speakerDetailsLabel" destination="8P7-hI-otb" id="1Zv-Rc-Yz5"/>
                         <outlet property="speakerImageView" destination="HdI-3O-f65" id="f1O-tS-s1N"/>
                         <outlet property="speakerNameLabel" destination="YR3-5U-sTf" id="1Dl-ip-h88"/>
@@ -701,7 +712,7 @@ CALENDAR</string>
     </scenes>
     <resources>
         <image name="calendar" width="35" height="35"/>
-        <image name="favorites2x" width="32" height="30"/>
+        <image name="favorites2x" width="16" height="15"/>
         <image name="focus" width="42" height="42"/>
         <image name="location2x" width="24" height="24"/>
         <image name="map-hall2" width="686" height="546"/>
