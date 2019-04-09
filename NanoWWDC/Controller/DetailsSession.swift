@@ -28,8 +28,13 @@ class DetailsSession: UITableViewController {
     
     @IBOutlet weak var sessionDetailsLabel: UILabel!
     
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    
+    @IBOutlet weak var favoriteButton: UIBarButtonItem!
     
     @IBOutlet weak var localImageView: UIImageView!
+    
+    var isFavorite: Bool = false
     
     var session: Session?
     
@@ -40,6 +45,11 @@ class DetailsSession: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if isFavorite {
+            favoriteButton.image = UIImage(named: "favorites-select2x")
+            favoriteButton.tintColor = UIColor(red: 1.0, green: 0.76, blue: 0, alpha: 1)
+        } 
         
         typeSessionLabel.text = session?.category
         sessionTitleLabel.text = session?.title
