@@ -297,9 +297,12 @@
                                                         <constraint firstAttribute="height" constant="30" id="z3i-jM-UfY"/>
                                                     </constraints>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="more" translatesAutoresizingMaskIntoConstraints="NO" id="36B-VO-SzZ">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more" translatesAutoresizingMaskIntoConstraints="NO" id="36B-VO-SzZ">
                                                     <rect key="frame" x="281" y="205" width="11" height="14"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="KVl-wT-Y3u"/>
+                                                        <constraint firstAttribute="width" constant="11" id="YdF-HD-Ju2"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuD-gG-anl">
                                                     <rect key="frame" x="16" y="22" width="0.0" height="0.0"/>
@@ -313,9 +316,11 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9H-0x-rsl">
-                                                    <rect key="frame" x="295" y="198" width="59" height="26"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9H-0x-rsl">
+                                                    <rect key="frame" x="295" y="198" width="54" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="zPA-44-Bw3"/>
+                                                    </constraints>
                                                     <attributedString key="attributedText">
                                                         <fragment>
                                                             <string key="content">ADD TO
@@ -330,11 +335,16 @@ CALENDAR</string>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="36B-VO-SzZ" firstAttribute="top" secondItem="HdI-3O-f65" secondAttribute="bottom" constant="-46" id="37C-ql-Jxi"/>
+                                                <constraint firstItem="t9H-0x-rsl" firstAttribute="leading" secondItem="HdI-3O-f65" secondAttribute="trailing" constant="-80" id="52U-eO-d6v"/>
+                                                <constraint firstItem="t9H-0x-rsl" firstAttribute="top" secondItem="HdI-3O-f65" secondAttribute="bottom" constant="-53" id="9TF-WS-Tox"/>
                                                 <constraint firstItem="HdI-3O-f65" firstAttribute="top" secondItem="8lS-0a-ms7" secondAttribute="top" id="H3R-kg-DuQ"/>
                                                 <constraint firstItem="d8W-EP-FbY" firstAttribute="top" secondItem="HdI-3O-f65" secondAttribute="bottom" constant="-54" id="Jbe-zx-P5e"/>
                                                 <constraint firstItem="HdI-3O-f65" firstAttribute="leading" secondItem="8lS-0a-ms7" secondAttribute="leading" id="Ncn-Bo-IyJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="t9H-0x-rsl" secondAttribute="bottom" constant="16" id="OW0-FN-Exc"/>
                                                 <constraint firstItem="AuD-gG-anl" firstAttribute="leading" secondItem="8lS-0a-ms7" secondAttribute="leadingMargin" id="Wfv-eG-k6k"/>
                                                 <constraint firstAttribute="trailing" secondItem="d8W-EP-FbY" secondAttribute="trailing" constant="16" id="dwJ-fo-LBR"/>
+                                                <constraint firstItem="t9H-0x-rsl" firstAttribute="leading" secondItem="36B-VO-SzZ" secondAttribute="trailing" constant="3" id="g1f-1f-qyj"/>
                                                 <constraint firstItem="UTW-Hz-DmQ" firstAttribute="leading" secondItem="8lS-0a-ms7" secondAttribute="leadingMargin" id="mxu-3X-PWU"/>
                                                 <constraint firstItem="UTW-Hz-DmQ" firstAttribute="top" secondItem="HdI-3O-f65" secondAttribute="bottom" constant="-54" id="wRq-6Q-wQK"/>
                                                 <constraint firstItem="AuD-gG-anl" firstAttribute="top" secondItem="8lS-0a-ms7" secondAttribute="topMargin" constant="11" id="xyb-S4-sod"/>
@@ -608,7 +618,7 @@ CALENDAR</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4C-JZ-sQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3332" y="2023"/>
+            <point key="canvasLocation" x="3332" y="2022.1889055472266"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="AVk-OA-d3E">
