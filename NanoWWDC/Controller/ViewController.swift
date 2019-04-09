@@ -25,6 +25,11 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         // Do any additional setup after loading the view.
+        
+        
+        var firstViewController:UIViewController = UIViewController()
+        var customTabBarItem:UITabBarItem = UITabBarItem(title: nil, image: UIImage(named: "schedule")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), selectedImage: UIImage(named: "schedule"))
+        firstViewController.tabBarItem = customTabBarItem
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
