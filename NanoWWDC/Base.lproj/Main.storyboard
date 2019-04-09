@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L8W-pm-3U7">
-                                <rect key="frame" x="10" y="210" width="355" height="408"/>
+                                <rect key="frame" x="10" y="223" width="355" height="395"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SessionCell" rowHeight="170" id="AUq-jU-kF4" customClass="SessionTableViewCell" customModule="NanoWWDC" customModuleProvider="target">
@@ -29,8 +29,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byG-0p-m5o" userLabel="Cell Shadow">
-                                                    <rect key="frame" x="7" y="0.0" width="338" height="151"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byG-0p-m5o" userLabel="Cell Shadow" customClass="ShadowView" customModule="NanoWWDC" customModuleProvider="target">
+                                                    <rect key="frame" x="85" y="0.0" width="260" height="147"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dch-Gv-Bfh" customClass="UIImageView">
                                                     <rect key="frame" x="0.0" y="1" width="133" height="150"/>
@@ -145,7 +151,7 @@
                                             <color key="tintColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="dch-Gv-Bfh" firstAttribute="top" secondItem="YJk-ZS-JoP" secondAttribute="top" priority="750" id="2JN-hk-lHd"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="byG-0p-m5o" secondAttribute="bottom" constant="8" id="2r2-WB-yfj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="byG-0p-m5o" secondAttribute="bottom" constant="12" id="2r2-WB-yfj"/>
                                                 <constraint firstItem="dch-Gv-Bfh" firstAttribute="leading" secondItem="YJk-ZS-JoP" secondAttribute="leading" priority="750" id="3oQ-n1-kGv"/>
                                                 <constraint firstItem="jLx-mu-tdT" firstAttribute="top" secondItem="YJk-ZS-JoP" secondAttribute="topMargin" id="6Vy-gU-A90"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="QRa-Z3-J1q" secondAttribute="trailing" constant="41" id="8dH-Wl-E9t"/>
@@ -160,7 +166,7 @@
                                                 <constraint firstItem="lXl-2N-HmT" firstAttribute="top" secondItem="YJk-ZS-JoP" secondAttribute="topMargin" constant="10" id="epT-Ch-nDW"/>
                                                 <constraint firstAttribute="trailing" secondItem="dch-Gv-Bfh" secondAttribute="trailing" priority="750" constant="220" id="iIQ-rq-OP6"/>
                                                 <constraint firstItem="dch-Gv-Bfh" firstAttribute="top" secondItem="YJk-ZS-JoP" secondAttribute="top" priority="750" id="jkh-j7-8ab"/>
-                                                <constraint firstItem="byG-0p-m5o" firstAttribute="leading" secondItem="YJk-ZS-JoP" secondAttribute="leadingMargin" constant="-8" id="oMc-hV-pSg"/>
+                                                <constraint firstItem="byG-0p-m5o" firstAttribute="leading" secondItem="YJk-ZS-JoP" secondAttribute="leadingMargin" constant="70" id="oMc-hV-pSg"/>
                                                 <constraint firstAttribute="bottom" secondItem="dch-Gv-Bfh" secondAttribute="bottom" constant="19" id="oYK-FP-LSB"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="lXl-2N-HmT" secondAttribute="trailing" id="vbe-KE-Wyz"/>
                                                 <constraint firstItem="NGK-3i-a3r" firstAttribute="leading" secondItem="dch-Gv-Bfh" secondAttribute="trailing" constant="8" id="x5y-Tg-0aZ"/>
@@ -169,7 +175,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="cellShadow" destination="byG-0p-m5o" id="1sF-GM-9LL"/>
                                             <outlet property="sessionCategory" destination="Dtc-Vw-B75" id="OER-kC-O3F"/>
                                             <outlet property="sessionHall" destination="MVb-in-HyZ" id="APw-T5-Mnt"/>
                                             <outlet property="sessionHour" destination="9Tv-9M-R0c" id="lS2-qv-lJf"/>
@@ -182,16 +187,20 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Oc-UJ-VoM">
-                                <rect key="frame" x="10" y="78" width="355" height="102"/>
+                                <rect key="frame" x="10" y="78" width="355" height="115"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8y0-Wl-UI0">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="43"/>
+                                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="Udc-9Q-yUc"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qck-wv-c0x">
-                                        <rect key="frame" x="0.0" y="38" width="355" height="29"/>
+                                        <rect key="frame" x="0.0" y="51" width="355" height="29"/>
                                         <segments>
                                             <segment title="Sessions"/>
                                             <segment title="Labs"/>
@@ -200,7 +209,7 @@
                                         <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pPG-l9-ugH">
-                                        <rect key="frame" x="0.0" y="74" width="355" height="29"/>
+                                        <rect key="frame" x="0.0" y="87" width="355" height="29"/>
                                         <segments>
                                             <segment title="Jun 3"/>
                                             <segment title="Jun 4"/>
@@ -252,6 +261,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3332" y="905"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mF2-Kk-atA">
+            <objects>
+                <viewController id="gQT-F5-T07" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yQl-uE-FhE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nud-fR-Wf9" customClass="ShadowView" customModule="NanoWWDC" customModuleProvider="target">
+                                <rect key="frame" x="67" y="253" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="34"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="UTF-Gn-ANe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9A-yl-fYw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4774" y="1126"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Q3t-qv-ZOm">
@@ -670,14 +706,14 @@ CALENDAR</string>
                     <connections>
                         <outlet property="addToCalendarButton" destination="d8W-EP-FbY" id="RIB-js-W5f"/>
                         <outlet property="dateSessionLabel" destination="L9e-sJ-u0z" id="Zpv-zr-YQX"/>
-                        <outlet property="favoriteButton" destination="WUc-Bz-TpS" id="Ihb-Co-fWk"/>
+                        <outlet property="favoriteButton" destination="WUc-Bz-TpS" id="uiP-vF-8Xl"/>
                         <outlet property="hallLabel" destination="Zxf-MV-qUS" id="dDW-K6-CRY"/>
                         <outlet property="localImageView" destination="pkQ-vW-wWN" id="A1Y-z6-MCp"/>
                         <outlet property="markAsWatchedButton" destination="psY-gO-edW" id="7f2-YE-NmH"/>
                         <outlet property="scheduleSession" destination="gC6-Md-wsh" id="xuo-9q-zf8"/>
                         <outlet property="sessionDetailsLabel" destination="arG-xm-3IE" id="e6l-TJ-B0O"/>
                         <outlet property="sessionTitleLabel" destination="UTW-Hz-DmQ" id="Amp-kq-5QQ"/>
-                        <outlet property="shareButton" destination="G5v-e7-aPC" id="Hzm-Hk-faB"/>
+                        <outlet property="shareButton" destination="G5v-e7-aPC" id="14c-qy-3A7"/>
                         <outlet property="speakerDetailsLabel" destination="8P7-hI-otb" id="1Zv-Rc-Yz5"/>
                         <outlet property="speakerImageView" destination="HdI-3O-f65" id="f1O-tS-s1N"/>
                         <outlet property="speakerNameLabel" destination="YR3-5U-sTf" id="1Dl-ip-h88"/>

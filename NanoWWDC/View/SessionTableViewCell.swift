@@ -18,7 +18,6 @@ class SessionTableViewCell: UITableViewCell {
     @IBOutlet weak var sessionHall: UILabel!
     @IBOutlet weak var sessionNumber: UILabel!
     @IBOutlet weak var sessionCategory: UILabel!
-    @IBOutlet weak var cellShadow: UIView!
     
     
     
@@ -30,7 +29,9 @@ class SessionTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-    
     }
+    
+    
+    
 
 }
