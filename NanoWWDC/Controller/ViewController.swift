@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
         Session(title: "Qualities of a Great Design", speaker: "Lauren Strehlow", date: "Tuesday, Jun 4", hour: "10:00 - 12:00", hall: "HALL 2", sessionNumber: 4, category: "design 🎨", photo: "speaker-lauren", sessionDetails: "Great Design isn't magic, it is crafted with care by real people. Explore the characteristics of great design through the voices of designers from Apple and our developer community. Learn how they take inspiration from everyday life, conceive and refine ideas, and push themselves to design apps and games that can stand the test of time.", speakerDetails: "Lauren Strehlow Creative, strategic, diplomatic thinker who excels in a fast paced, visual environment. Enjoys managing, mentoring and providing creative guidance in high pressure situations. Let's do this."),
         
-        Session(title: "What's New in whatchOS", speaker: "Lori Hylan-Cho", date: "Tuesday, Jun 4", hour:  "14:00 - 16:00", hall: "HALL 2", sessionNumber: 5, category: "feature ❤", photo: "speaker-lori", sessionDetails: "WatchOS 5 makes creating great experiences on Apple Watch easier than ever before. Learn about robust capabilities to create rich and interactive notifications, a new background mode and controls for audio playback, shortcuts that bring your apps to the Siri watch face, and more.", speakerDetails: "Lori Hylan-Cho SW Engineering Manager at Apple. Specialties: Assembling and leading highly functional teams, agile software development, iOS engineering & project management, API development & documentation, finding the flaw in any plan."),
+        Session(title: "What's New in watchOS", speaker: "Lori Hylan-Cho", date: "Tuesday, Jun 4", hour:  "14:00 - 16:00", hall: "HALL 2", sessionNumber: 5, category: "feature ❤", photo: "speaker-lori", sessionDetails: "WatchOS 5 makes creating great experiences on Apple Watch easier than ever before. Learn about robust capabilities to create rich and interactive notifications, a new background mode and controls for audio playback, shortcuts that bring your apps to the Siri watch face, and more.", speakerDetails: "Lori Hylan-Cho SW Engineering Manager at Apple. Specialties: Assembling and leading highly functional teams, agile software development, iOS engineering & project management, API development & documentation, finding the flaw in any plan."),
         
         Session(title: "Building Faster in Xcode", speaker: "David Owens", date: "Tuesday, Jun 4", hour: "16:00- 18:00", hall: "HALL 3", sessionNumber: 6, category: "developer 💻", photo: "speaker-david", sessionDetails: "none", speakerDetails: "none"),
         
@@ -99,8 +99,6 @@ extension ViewController: UITableViewDataSource {
         
         return sessionDate
     }
-
-   
     
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //        let headerView = UIView()
@@ -128,7 +126,17 @@ extension ViewController: UITableViewDataSource {
         cell.sessionTitle.text = session.title
         cell.sessionSpeaker.text = "Speaker: \(session.speaker)"
         cell.sessionHour.text = session.hour
+        cell.sessionHour.textColor = UIColor(red: 1.0, green: 0.17, blue: 0.33, alpha: 1.0)
         cell.sessionHall.text = session.hall
+        cell.sessionHall.textColor = UIColor(red: 1.0, green: 0.17, blue: 0.33, alpha: 1.0)
+    
+        cell.cellShadow.layer.shadowColor = UIColor.black.cgColor
+        cell.cellShadow.layer.shadowRadius = 8.0
+        cell.cellShadow.layer.shadowOffset = CGSize(width: 0, height: 3)
+        cell.cellShadow.layer.opacity = 0.25
+        
+        
+        //cell.cellShadow.layer.shouldRasterize = true
         
         if session.sessionNumber == 10 {
             cell.sessionNumber.text = "Session \(session.sessionNumber)"

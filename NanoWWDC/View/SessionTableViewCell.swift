@@ -18,6 +18,7 @@ class SessionTableViewCell: UITableViewCell {
     @IBOutlet weak var sessionHall: UILabel!
     @IBOutlet weak var sessionNumber: UILabel!
     @IBOutlet weak var sessionCategory: UILabel!
+    @IBOutlet weak var cellShadow: UIView!
     
     
     
