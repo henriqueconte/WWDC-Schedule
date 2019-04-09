@@ -8,9 +8,13 @@
 
 import UIKit
 
+
+
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedDay: UISegmentedControl!
     
     var isFavorite: Bool = false
     
@@ -43,7 +47,6 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     
-        
         for i in 0..<sessions.count-1 {
             sessions[i].setNextSession(nextSession: sessions[i+1])
         }
@@ -77,16 +80,40 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func rollToDate(_ sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            let indexPath = NSIndexPath(item: 1, section: 0)
+            tableView.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.middle, animated: true)
+            break
+        case 1:
+            let indexPath = NSIndexPath(item: 1, section: 1)
+            tableView.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.middle, animated: true)
+            break
+        case 2:
+            let indexPath = NSIndexPath(item: 1, section: 2)
+            tableView.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.middle, animated: true)
+            break
+        default:
+            let indexPath = NSIndexPath(item: 1, section: 2)
+            tableView.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.middle, animated: true)
+            break
+        }
+    }
+    
+    
+    
 }
 
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sessionDate = dates[section]
-        
-        let sessions = self.sessions.filter{ $0.date == sessionDate }
-        
+        var sessions = self.sessions.filter{ $0.date == sessionDate }
+    
         return sessions.count
+    
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -95,29 +122,15 @@ extension ViewController: UITableViewDataSource {
    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        var headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 100))
-        var headerTitle = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 28))
-        
-        func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-            let sessionDate = dates[section]
-            
-            return sessionDate
-        }
-
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 100))
+        let headerTitle = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 28))
         
         headerTitle.text = dates[section]
         headerView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         headerView.addSubview(headerTitle)
         
-        
         return headerView
     }
-
-   
-    
-    
-    
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -136,29 +149,9 @@ extension ViewController: UITableViewDataSource {
         cell.sessionTitle.text = session.title
         cell.sessionSpeaker.text = "Speaker: \(session.speaker)"
         cell.sessionHour.text = session.hour
+        cell.sessionHour.textColor = UIColor(red: 1.0, green: 0.17, blue: 0.33, alpha: 1.0)
         cell.sessionHall.text = session.hall
         cell.sessionHall.textColor = UIColor(red: 1.0, green: 0.17, blue: 0.33, alpha: 1.0)
-    
-//        cell.cellShadow.layer.shadowColor = UIColor.black.cgColor
-//        cell.cellShadow.layer.shadowRadius = 3
-//        cell.cellShadow.layer.shadowOffset = CGSize(width: -1.0, height: 1.0)
-//        cell.cellShadow.layer.opacity = 1.0
-//        cell.cellShadow.layer.masksToBounds = false
-        //cell.cellShadow.layer.cornerRadius = 10.0
-    
-        
-//        cell.contentView.layer.masksToBounds = false
-//        cell.layer.masksToBounds = false
-//        cell.cellShadow.setNeedsDisplay()
-        
-//        cell.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-//        cell.layer.shadowRadius = 5.0
-//        cell.layer.shadowOffset = CGSize(width: 0, height: 3)
-//        cell.layer.opacity = 0.25
-//        cell.layer.masksToBounds = false
-
-        
-        //cell.cellShadow.layer.shouldRasterize = true
         
         if session.sessionNumber == 10 {
             cell.sessionNumber.text = "Session \(session.sessionNumber)"
