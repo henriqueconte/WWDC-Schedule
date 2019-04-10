@@ -34,6 +34,19 @@ class DetailsSession: UITableViewController {
     
     @IBOutlet weak var localImageView: UIImageView!
     
+    
+    @IBOutlet weak var nextSessionImageView: UIImageView!
+    
+    
+    
+    @IBOutlet weak var nextSessionHallLabel: UILabel!
+    @IBOutlet weak var nextSessionHourLabel: UILabel!
+    @IBOutlet weak var nextSessionNumberLabel: UILabel!
+    @IBOutlet weak var nextSessionTypeLabel: UILabel!
+    @IBOutlet weak var nextSessionTitleLabel: UILabel!
+    @IBOutlet weak var nextSessionSpeaker: UILabel!
+    
+    
     var isFavorite: Bool = false
     
     var session: Session?
@@ -42,6 +55,11 @@ class DetailsSession: UITableViewController {
         super.viewDidLoad()
     
     }
+    
+    @IBAction func addToCalendarAction(_ sender: Any) {
+    }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -65,9 +83,23 @@ class DetailsSession: UITableViewController {
         markAsWatchedButton.layer.cornerRadius = 15
     
         speakerImageView.image = UIImage(named: session!.photo + "2")
-    }
+        
+        
+        // next session
+        nextSessionImageView.image = UIImage(named: session?.nextSession!.photo ?? "speaker-tim")
+        nextSessionTitleLabel.text = session?.nextSession?.title
+        nextSessionSpeaker.text = "Speaker: \(session?.nextSession!.speaker ?? "")"
+        nextSessionHourLabel.text = session?.nextSession?.hour
+        nextSessionHallLabel.text = session?.nextSession?.hall
+        nextSessionTypeLabel.text = session?.nextSession?.category
+        
+        if session?.nextSession?.sessionNumber == 10 {
+            nextSessionNumberLabel.text = "Session \(session?.nextSession!.sessionNumber ?? 0)"
+        }else {
+            nextSessionNumberLabel.text = "Session 0\(session?.nextSession!.sessionNumber ?? 0)"
+        }
     
-
+    }
     
     
 
